@@ -1,4 +1,14 @@
 # DBMS-NortWind
+
+<div style="display: flex; align-items: center; gap: 10px;">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server" width="30">
+  <span>SQL Server</span>
+</div>
+<div style="display: flex; align-items: center; gap: 10px;">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" width="30">
+  <span>C#</span>
+</div>
+
 ## หน้าหลัก 
 ![หน้าจอหลัก](images/home.jpeg)
 ## เมื่อกดปรับปรุง ข้อมูล
