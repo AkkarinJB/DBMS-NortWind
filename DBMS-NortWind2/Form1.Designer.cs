@@ -35,7 +35,6 @@
             btninsert = new Button();
             btnUpdate = new Button();
             btnDelete = new Button();
-            btnClear = new Button();
             txtShipperID = new TextBox();
             txtCompanyName = new TextBox();
             txtPhone = new TextBox();
@@ -52,6 +51,7 @@
             dgvShippers.Size = new Size(776, 263);
             dgvShippers.TabIndex = 0;
             dgvShippers.CellContentClick += dataGridView1_CellContentClick;
+            dgvShippers.CellDoubleClick += dgvShippers_CellDoubleClick;
             dgvShippers.CellMouseUp += dataGridView1_CellMouseUp;
             // 
             // label1
@@ -62,6 +62,7 @@
             label1.Size = new Size(76, 15);
             label1.TabIndex = 1;
             label1.Text = "รหัสบริษัทขนส่ง";
+            label1.Visible = false;
             // 
             // label2
             // 
@@ -71,6 +72,7 @@
             label2.Size = new Size(46, 15);
             label2.TabIndex = 2;
             label2.Text = "ชื่อบริษัท";
+            label2.Visible = false;
             // 
             // label3
             // 
@@ -80,13 +82,14 @@
             label3.Size = new Size(46, 15);
             label3.TabIndex = 3;
             label3.Text = "โทรศัพท์";
+            label3.Visible = false;
             label3.Click += label3_Click;
             // 
             // btninsert
             // 
             btninsert.BackColor = Color.FromArgb(0, 192, 0);
             btninsert.ForeColor = Color.Black;
-            btninsert.Location = new Point(19, 415);
+            btninsert.Location = new Point(250, 415);
             btninsert.Name = "btninsert";
             btninsert.Size = new Size(75, 23);
             btninsert.TabIndex = 4;
@@ -97,7 +100,7 @@
             // btnUpdate
             // 
             btnUpdate.BackColor = Color.FromArgb(255, 128, 0);
-            btnUpdate.Location = new Point(137, 415);
+            btnUpdate.Location = new Point(368, 415);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(75, 23);
             btnUpdate.TabIndex = 5;
@@ -108,7 +111,7 @@
             // btnDelete
             // 
             btnDelete.BackColor = Color.Red;
-            btnDelete.Location = new Point(254, 415);
+            btnDelete.Location = new Point(485, 415);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(75, 23);
             btnDelete.TabIndex = 6;
@@ -116,23 +119,13 @@
             btnDelete.UseVisualStyleBackColor = false;
             btnDelete.Click += btnDelete_Click;
             // 
-            // btnClear
-            // 
-            btnClear.BackColor = Color.Yellow;
-            btnClear.Location = new Point(364, 415);
-            btnClear.Name = "btnClear";
-            btnClear.Size = new Size(75, 23);
-            btnClear.TabIndex = 7;
-            btnClear.Text = "ล้างฟอร์ม";
-            btnClear.UseVisualStyleBackColor = false;
-            btnClear.Click += btnClear_Click;
-            // 
             // txtShipperID
             // 
             txtShipperID.Location = new Point(103, 298);
             txtShipperID.Name = "txtShipperID";
             txtShipperID.Size = new Size(360, 23);
             txtShipperID.TabIndex = 8;
+            txtShipperID.Visible = false;
             // 
             // txtCompanyName
             // 
@@ -140,6 +133,7 @@
             txtCompanyName.Name = "txtCompanyName";
             txtCompanyName.Size = new Size(360, 23);
             txtCompanyName.TabIndex = 9;
+            txtCompanyName.Visible = false;
             // 
             // txtPhone
             // 
@@ -147,6 +141,7 @@
             txtPhone.Name = "txtPhone";
             txtPhone.Size = new Size(360, 23);
             txtPhone.TabIndex = 10;
+            txtPhone.Visible = false;
             // 
             // Form1
             // 
@@ -156,7 +151,6 @@
             Controls.Add(txtPhone);
             Controls.Add(txtCompanyName);
             Controls.Add(txtShipperID);
-            Controls.Add(btnClear);
             Controls.Add(btnDelete);
             Controls.Add(btnUpdate);
             Controls.Add(btninsert);
@@ -165,7 +159,7 @@
             Controls.Add(label1);
             Controls.Add(dgvShippers);
             Name = "Form1";
-            Text = "Form1";
+            Text = "ระบบจัดการข้อมูลบริษัทขนส่ง(shippers)";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dgvShippers).EndInit();
             ResumeLayout(false);
@@ -181,7 +175,6 @@
         private Button btninsert;
         private Button btnUpdate;
         private Button btnDelete;
-        private Button btnClear;
         private TextBox txtShipperID;
         private TextBox txtCompanyName;
         private TextBox txtPhone;
